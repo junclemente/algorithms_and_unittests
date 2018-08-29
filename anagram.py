@@ -1,5 +1,3 @@
-# Question 1
-
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 
