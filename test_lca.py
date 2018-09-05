@@ -1,6 +1,27 @@
 import unittest
 from lca import find_lca
 
+"""
+Question 4: Find the Least Common Ancestor (LCA) between two nodes.
+
+I thought these technical interview questions were going to get harder but
+thankfully, Question 3 was the most difficult one to solve (or at least I
+learned a lot more about Graphs trying to answer that question.) I also learned
+about Ancestry Matrices since this isn't the same type of matrix provided in
+Question 3. For this solution, I also created a subclass to help me find the
+LCA.
+
+I iterate through the ancestry matrix to create a binary tree at O(n). Finding
+an existing node searching through a binary tree takes O(log n). Once the node
+is found, a list of the nodes to parent is created in O(1) since the class
+has a parent value so no searching is necessary.
+
+To find the LCA, the shorter of the two list is iterated and checked to see if
+the value exists in the other list. This comparison would be O(n) or
+worst-case O(n^2) if the nodes were leafs, the same height away from the root.
+"""
+
+
 BAD_MATRIX = [[0, 0, 0, 0, 0, 0, 0, 0],
               [1, 0, 0, 0, 0, 0, 0, 0],
               [1, 1, 0, 0, 0, 0, 1, 1],

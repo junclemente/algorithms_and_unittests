@@ -1,6 +1,24 @@
 import unittest
 from mst import find_mst
 
+"""
+Question 3: Find a minimum spanning tree.
+
+This was the hardest question out of the five and took me a number of days to
+create a working solution. I created a subclass to help find the MST.
+
+I make sure that the provided adjacency matrix was undirected and then created
+a list of all unique edges. This takes O(n) to iterate throughout the matrix but
+it also reduces the list in the next step.
+
+I begin to create the minimum spanning tree by iterating through the
+unique edges list taking O(n). This list is smaller than the original provided
+matrix.
+
+I used Kruskal's algorithm to find the MST which takes O(E log E) to create
+the final MST where E is the total number of edges.
+"""
+
 
 class MinSpanningTreeTestCase(unittest.TestCase):
 
